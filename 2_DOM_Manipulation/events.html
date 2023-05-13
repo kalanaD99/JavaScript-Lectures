@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event</title>
+</head>
+<style>
+    body{
+        height: 100vh;
+    }
+
+    #follower{
+        width: 80px;
+        aspect-ratio: 1/1;
+        background: #0a53be;
+        border-radius: 100%;
+        position: absolute;
+    }
+
+</style>
+<body>
+<button id="myButton">Click</button>
+<div id="follower"></div>
+<script src="/assets/lib/jQuery/jquery-3.6.4.min.js"></script>
+<script>
+/*<!-- click event   method 1-->
+    $('#myButton').click(() =>{
+        alert("Clicked");
+    })*/
+
+/*/!*Method 2*!/
+$('#myButton').on('click',() =>{
+    alert(("Clicked-2"));
+})*/
+
+/*// double click event (dblClick)
+$('#myButton').on('dblClick',() => {
+    alert('Double Clicked');
+})*/
+
+/*/!*MOUSE DOWN (mousedown)*!/
+$('#myButton').on('mousedown',() =>{
+    console.log("Mousedown");
+})*/
+
+/*/!*MOUSE UP (mouseup)*!/
+$('#myButton').on('mouseup',() =>{
+    console.log("Mouseup");
+})*/
+
+/*/!*MOUSE MOVE (mousemove)*!/
+$('#myButton').on('mousemove',() =>{
+    console.log("Mouse moved!");
+})*/
+
+/*$('body').on('mousemove',() =>{
+    console.log("Mouse moved on body!");
+})*/
+
+    /*MOUSE MOVE*/
+/*$('body').on('mousemove', (event) =>{
+    let mouseX = event.clientX;
+    let mouseY = event.clientY;
+    $('#follower').css({left: mouseX, top: mouseY})
+})*/
+
+/*
+/!*MOUSE LEAVE(mouseleave)*!/
+$('#area').on('mouseleave', () =>{
+    alert("mouse move ( like css hover leave)");
+})
+*/
+
+</script>
+</body>
+</html>
